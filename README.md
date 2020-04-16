@@ -1,5 +1,5 @@
 # COOLnorm
-This is a reference implementation of the paper Learning Graph Representations with Maximal Cliques
+This is a reference implementation of the paper: **Learning Graph Representations with Maximal Cliques**
 
 
 # Requirements

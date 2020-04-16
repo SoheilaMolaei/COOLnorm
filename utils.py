@@ -31,14 +31,14 @@ def load_data( dataset_str, data_seed ):
 
     parent_path = Path(__file__).resolve().parents[1]
     for i in range(len(names)):
-        with open("//content/drive/My Drive/gcn/gcn/data/ind.{}.{}".format(dataset_str, names[i]), 'rb') as f:
+        with open("data/ind.{}.{}".format(dataset_str, names[i]), 'rb') as f:
             if sys.version_info > (3, 0):
                 objects.append(pkl.load(f, encoding='latin1'))
             else:
                 objects.append(pkl.load(f))
 
     x, y, tx, ty, allx, ally, graph = tuple(objects)
-    test_idx_reorder = parse_index_file("/content/drive/My Drive/gcn/gcn/data/ind.{}.test.index".format(dataset_str))
+    test_idx_reorder = parse_index_file("data/ind.{}.test.index".format(dataset_str))
     test_idx_range = np.sort(test_idx_reorder)
 
     if dataset_str == 'citeseer':

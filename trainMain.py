@@ -21,7 +21,7 @@ from models import GCN
 from absl import app, flags
 FLAGS = flags.FLAGS
 flags.DEFINE_enum(  'dataset', 'cora', input_data , 'Dataset' )
-flags.DEFINE_enum(  'model', 'COOL',
+flags.DEFINE_enum(  'model', 'COOLnorm',
                    [ 'COOL', 'COOLnorm' ],
                      'Model' )
 

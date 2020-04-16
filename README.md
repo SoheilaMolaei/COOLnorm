@@ -9,5 +9,6 @@ Python >= 3.6.x
 
 # Run the code
 !python trainMain.py --dataset <cora|citeseer|pubmed> --model <COOL,COOLnorm> --alfa <?> --beta <?> 
+
 Example: !python trainMain.py --dataset cora --model COOLnorm --alfa 1 --beta 0
 

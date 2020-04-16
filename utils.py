@@ -69,10 +69,10 @@ def load_data( dataset_str, data_seed ):
     idx_train = range(len(y))
     idx_val   = range(len(y), len(y)+500)
 
-    n=features.shape[0]-1
-    idx_val = range(int(0.2*n))
-    idx_train = range((int(0.2*n)), (int(0.2*n))*2)
-    idx_test = range((int(0.2*n))*2, n)
+#     n=features.shape[0]-1
+#     idx_val = range(int(0.2*n))
+#     idx_train = range((int(0.2*n)), (int(0.2*n))*2)
+#     idx_test = range((int(0.2*n))*2, n)
     
 
     idx_val = range(542)

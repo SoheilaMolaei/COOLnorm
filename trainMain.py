@@ -85,9 +85,9 @@ def train_Model( dataset, data_seed, init_seed ):
     y_train = np.zeros(labels.shape)
     y_train[train_mask, :] = labels[train_mask, :]
     y_train = np.argmax(y_train, axis=1)
-    clf = LogisticRegression(random_state=0, solver='lbfgs',multi_class='multinomial').fit(features[train_mask], y_train[train_mask])
-    model = SelectFromModel(clf, prefit=True)
-    features = model.transform(features)
+#     clf = LogisticRegression(random_state=0, solver='lbfgs',multi_class='multinomial').fit(features[train_mask], y_train[train_mask])
+#     model = SelectFromModel(clf, prefit=True)
+#     features = model.transform(features)
     
     #alfa A+ beta A' (Clique Finding) 
     graphMain=nx.from_numpy_matrix(adj.todense())

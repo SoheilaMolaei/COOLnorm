@@ -94,8 +94,7 @@ def train_Model( dataset, data_seed, init_seed ):
     listClique=list(nx.find_cliques(graphMain))
     tmp=deepcopy(np.matrix(adj.todense()))
     for i in listClique:
-            for j in i:
-                for k in i:
+            for k,j in zip(i,i):
                     if j!=k:
                         tmp[j,k]=len(i)-1
                         tmp[k,j]=len(i)-1

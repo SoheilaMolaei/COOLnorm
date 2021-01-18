@@ -24,7 +24,6 @@ flags.DEFINE_enum(  'dataset', 'cora', input_data , 'Dataset' )
 flags.DEFINE_enum(  'model', 'COOLnorm',
                    [ 'COOL', 'COOLnorm' ],
                      'Model' )
-
 flags.DEFINE_float(   'learning_rate', 0.01, 'initial learning rate.' )
 flags.DEFINE_float(   'dropout', 0.5, 'Dropout rate (1 - keep probability).' )
 flags.DEFINE_integer( 'epochs', 500, 'Number of epochs to train.' )

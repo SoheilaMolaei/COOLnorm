@@ -94,10 +94,11 @@ def train_Model( dataset, data_seed, init_seed ):
     listClique=list(nx.find_cliques(graphMain))
     tmp=deepcopy(np.matrix(adj.todense()))
     for i in listClique:
-            for k,j in zip(i,i):
+            for j in i:
+                for k in i:
                     if j!=k:
-                        tmp[j,k]=len(i)-1
-                        tmp[k,j]=len(i)-1
+                        adj[j,k]=len(i)-1
+                        adj[k,j]=len(i)-1
     adj=FLAGS.alfa*np.matrix(adj.todense())+FLAGS.beta*tmp 
 
     features = preprocess_features( features )
